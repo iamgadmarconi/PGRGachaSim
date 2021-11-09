@@ -7,7 +7,7 @@ class Copies:
         self.copies = int(copies)
 
     def averageprice(self, currency="CHF"):
-        sim = Simulation(100, 240)
+        sim = Simulation(100, self.copies*60)
         sim.run()
         ave_s, ave_ur = sim.calculate()
         ppp = priceperpull(currency)
