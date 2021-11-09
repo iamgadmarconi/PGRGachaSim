@@ -41,3 +41,7 @@ class Simulation:
         return average_srank // total, average_rateup // total
 
 
+# s = Simulation(100, 1200)
+# s.run()
+# s.calculate()
+# print(s.__str__())

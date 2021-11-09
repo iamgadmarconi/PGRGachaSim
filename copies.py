@@ -1,5 +1,5 @@
 from simulation import Simulation
-from rates import priceperpull, rank
+from rates import priceperpull
 
 
 class Copies:
@@ -7,7 +7,7 @@ class Copies:
         self.copies = int(copies)
 
     def averageprice(self, currency="CHF"):
-        sim = Simulation(100, self.copies*60)
+        sim = Simulation(1000, self.copies*120)
         sim.run()
         ave_s, ave_ur = sim.calculate()
         ppp = priceperpull(currency)
